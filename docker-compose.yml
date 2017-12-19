@@ -4,8 +4,8 @@ services:
     image: shuosc/unbound:latest
     restart: always
     ports:
-      - "53:53/tcp"
-      - "53:53/udp"
+      - "54:53/tcp"
+      - "54:53/udp"
     volumes:
-      - /home/docker-unbound/supervisor.conf.d:/etc/supervisor/conf.d
-      - /home/docker-unbound/unbound.conf.d:/usr/local/etc/unbound/conf.d
+      - /home/docker-unbound/supervisor:/etc/supervisor/
+      - /home/docker-unbound/unbound:/usr/local/etc/unbound/
